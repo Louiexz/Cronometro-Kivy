@@ -6,17 +6,14 @@
             text: ""
         Label:
             text: "Horas"
-            size_hint_x: 0.25
         Label:
             text: ""
         Label:
             text: "Minutos"
-            size_hint_x: 0.25
         Label:
             text: ""
         Label:
             text: "Segundos"
-            size_hint_x: 0.25
         Label:
             text: ""
 
@@ -26,48 +23,42 @@
         TextInput:
             text: "00"
             id: horas
-            input_filter: "int"
-            multiline: "False"
         Label:
-            text: ":"
+            text: ""
         TextInput:
             text: "00"
             id: minutos
-            input_filter: "int"
-            multiline: "False"
         Label:
-            text: ":"
+            text: ""
         TextInput:
             text: "00"
             id: segundos
-            input_filter: "int"
-            multiline: "False"
         Label:
             text: ""
-            spacing: 10
 
     BoxLayout:
         Button:
             text: "[color=00ee00]Iniciar[/color]"
             on_press: app.root.cronometro_iniciar()
-            markup: True
-            size_hint_x: 0.33
         Button:
             text: "[color=00ee00]Reverter[/color]"
             on_press: app.root.cronometro_reverter()
-            markup: True
-            size_hint_x: 0.33
         Button:
             text: "[color=ee0000]Parar[/color]"
             on_press: app.root.cronometro_parar()
-            markup: True
-            size_hint_x: 0.33
+
+<Button@BUtton>:
+    markup: True
+    size_hint_x: 0.33
+
+<Label@Label>:
+    font_size: "24sp"
+    size_hint_x: 0.25
 
 <TextInput@TextInput>:
     font_size: "26sp"
     halign: "center"
     foreground_color: 1, 1, 1, 1
     background_color: 0, 0, 0, 0.9
-
-<Label@Label>:
-    font_size: "24sp"
+    input_filter: "int"
+    multiline: "False"
