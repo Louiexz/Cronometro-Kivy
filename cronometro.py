@@ -41,3 +41,6 @@ class Cronometro(BoxLayout):
 class CronometroApp(App):
     icon = "img/ampulheta.png"
     def build(self): return Cronometro()
+
+if __name__ == '__main__':
+    CronometroApp().run()
